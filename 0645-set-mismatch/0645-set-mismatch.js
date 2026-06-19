@@ -7,7 +7,7 @@ var findErrorNums = function(nums) {
     let dup = 0;
     // let n = Array(nums.length).fill(1).map((val, index) => index+1);
     let n = nums.length;
-    console.log(n);
+    // console.log(n);
     let arr = []
 
     for(let num of nums){
