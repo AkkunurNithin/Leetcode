@@ -16,12 +16,10 @@ var combinationSum = function(candidates, target) {
             return;
         }
 
-        // Include current element
         current.push(candidates[index]);
-        backtrack(index, current, sum + candidates[index]); // same index because reuse is allowed
+        backtrack(index, current, sum + candidates[index]); 
         current.pop();
 
-        // Skip current element
         backtrack(index + 1, current, sum);
     }
 
