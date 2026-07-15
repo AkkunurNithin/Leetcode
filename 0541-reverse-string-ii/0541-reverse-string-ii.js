@@ -4,12 +4,12 @@
  * @return {string}
  */
 var reverseStr = function(s, k) {
-    let arr = s.split("");
+    let arr = s.split("");  // bcz str are immutable cnvrt into arr
 
     for (let i = 0; i < arr.length; i += 2 * k) {
 
         let left = i;
-        let right = Math.min(i + k - 1, arr.length - 1);
+        let right = Math.min(i + k - 1, arr.length - 1); // want to reverse only the first k characters of every 2k block.
 
         while (left < right) {
             [arr[left], arr[right]] = [arr[right], arr[left]];
