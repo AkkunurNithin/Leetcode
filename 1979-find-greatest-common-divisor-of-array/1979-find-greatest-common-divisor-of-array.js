@@ -3,14 +3,17 @@
  * @return {number}
  */
 var findGCD = function(nums) {
-    let min = Math.min(...nums);
-    let max = Math.max(...nums);
+     let min = nums[0];
+    let max = nums[0];
+
+    for (let num of nums) {
+        if (num < min) min = num;
+        if (num > max) max = num;
+    }
 
     function gcd(a, b) {
         while (b !== 0) {
-            let temp = b;
-            b = a % b;
-            a = temp;
+            [a, b] = [b, a % b];
         }
         return a;
     }
