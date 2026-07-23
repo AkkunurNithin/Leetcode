@@ -3,7 +3,7 @@
  * @return {number}
  */
 var climbStairs = function(n) {
-     if (n <= 2) return n;
+    if (n <= 2) return n;
     let first = 1;
     let second = 2;
 
